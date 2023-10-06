@@ -14,7 +14,7 @@ System.Console.WriteLine($"Целые числа в диапазоне от {-ch
 if (chislo < 0)
     chislo = -chislo;
 
-for (int i = -chislo; i < chislo + 1; i++)
+for (int i = -chislo; i <= chislo; i++)
 { 
     System.Console.Write(i); 
     if(i < chislo)
