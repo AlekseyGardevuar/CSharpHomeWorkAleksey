@@ -31,17 +31,26 @@ else
 }
 */
 
+int UserReverseChisl(int a)
+{
+    int revN = 0;
+    for (int i = a; i > 0; i = i / 10)
+    {
+        revN = revN * 10 + i % 10;
+    }
+    return revN;
+}
+
+void SravnPal(int rev, int N)
+{
+    if (N == rev)
+    {
+        System.Console.WriteLine("Число палиндром!");
+    }
+    else
+        System.Console.WriteLine("Число не палендром!");
+}
 System.Console.Write("Задай число: ");
 int N = Convert.ToInt32(Console.ReadLine());
-int revN = 0;
-for (int i = N; i > 0; i = i / 10)
-{
-    revN = revN * 10 + i % 10;
-    //System.Console.WriteLine(revN);
-}
-if (N == revN)
-{
-    System.Console.WriteLine("Число палиндром!");
-}
-else
-    System.Console.WriteLine("Число не палендром!");
+int ReversN = UserReverseChisl(N);
+SravnPal(ReversN, N);

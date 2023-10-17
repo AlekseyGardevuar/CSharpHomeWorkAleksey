@@ -6,17 +6,21 @@
 2 -> 1,4
 */
 
+void TableSqr(int a)
+{
+        for (double i = 1; i <= a; i++)
+        {
+                double sqr = Math.Pow(i, 2);
+                System.Console.Write(sqr);
+                if (i < a)
+                        System.Console.Write(", ");
+        }
+}
 Console.Clear();
 System.Console.WriteLine("Введите число N: ");
-double number = int.Parse(Console.ReadLine());
+int number = Convert.ToInt32(Console.ReadLine());
+TableSqr(number);
 
-for (double i = 1; i <= number; i++)
-{
-    double sqr = Math.Pow(i, 2);
-    System.Console.Write(sqr);
-    if(i < number)
-        System.Console.Write(", ");
-}
 
 /*
 System.Console.WriteLine("Введите число");
@@ -34,3 +38,4 @@ for(int i = 1; i <= num; i++)
         System.Console.WriteLine($"{i} * {i} = {i*i}");
         
 */
+

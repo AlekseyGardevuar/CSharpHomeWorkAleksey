@@ -23,5 +23,7 @@ void PrintArray(int[] arr1)
     }
 }
 
-int[] userArray = GetRnd(8);
+System.Console.WriteLine("Задай размер масива:");
+int userSize = Convert.ToInt32(Console.ReadLine());
+int[] userArray = GetRnd(userSize);
 PrintArray(userArray);
