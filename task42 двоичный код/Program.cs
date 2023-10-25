@@ -5,28 +5,28 @@
 2 -> 10
 */
 
-/*Console.Clear();
-
+Console.Clear();
+//num = 10
 int DecToBinary(int num)
 {
     int result = 0;
     int temp = 1;
     while(num > 0)
     {
-        result += num % 2 * temp;
-        num /= 2;
-        temp *= 10;
+        result = result + num % 2 * temp; // 0 10 10 1010
+        num = num / 2; // 5 2 1
+        temp = temp * 10; // 10 100 1000
     }
 
     return result;
 }
 
 
-int num = 3;
+int num = 10;
 
-System.Console.WriteLine(DecToBinary(num));*/
+System.Console.WriteLine(DecToBinary(num));
 
-void InBinaryCode(int numb)
+/*void InBinaryCode(int numb)
 {
     string result = "";
     int binary = 0;
@@ -37,4 +37,4 @@ void InBinaryCode(int numb)
     }
     System.Console.Write(result);
 }
-InBinaryCode(10);
+InBinaryCode(10);*/

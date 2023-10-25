@@ -5,7 +5,7 @@
 
 Console.Clear();
 
-int[] GetRnd(int size)
+/*int[] GetRnd(int size)
 {
     int[] array = new int[size];// = {1, 0, 1, 0, 1, 0, 1} - ввод определенного массива
     for (int i = 0; i < size; i++)
@@ -26,4 +26,7 @@ void PrintArray(int[] arr1)
 System.Console.WriteLine("Задай размер масива:");
 int userSize = Convert.ToInt32(Console.ReadLine());
 int[] userArray = GetRnd(userSize);
-PrintArray(userArray);
+PrintArray(userArray);*/
+
+int i = 1 % 2;
+System.Console.WriteLine(i);

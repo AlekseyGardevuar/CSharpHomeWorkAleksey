@@ -32,7 +32,7 @@ void PrintArray(int[] arr)
     Console.ResetColor();
 }
 
-/*void Rev(int[] arr)
+void Rev(int[] arr)
 {
     for (int i = 0; i < arr.Length / 2; i++)
     {
@@ -40,12 +40,12 @@ void PrintArray(int[] arr)
         arr[i] = arr[arr.Length - 1 - i];
         arr[arr.Length - 1 - i] = temp;
     }
-}*/
+}
 
 int[] ArrayRnd = GetRnd(5);
 PrintArray(ArrayRnd);
 System.Console.WriteLine();
-//Rev(ArrayRnd);
+Rev(ArrayRnd);
 System.Console.WriteLine();
-Array.Reverse(ArrayRnd);
+//Array.Reverse(ArrayRnd);
 PrintArray(ArrayRnd);
