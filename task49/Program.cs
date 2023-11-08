@@ -20,17 +20,23 @@ int[,] GetRnd(int rows, int colom)
 
 void PrintMatrix(int[,] arr)
 {
-    Console.ForegroundColor = ConsoleColor.Green;
+    System.Console.Write("[ ] \t");
+    for (int j = 0; j < arr.GetLength(1); j++)
+    {
+        System.Console.Write($"[{j}] \t");
+    }
+    System.Console.WriteLine();
     for (int i = 0; i < arr.GetLength(0); i++)
     {
+        System.Console.Write($"[{i}] \t");
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        System.Console.Write(arr[i, j] + " ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            System.Console.Write(" " + arr[i, j] + "\t");
+            Console.ResetColor();
         }
         System.Console.WriteLine();
     }
-    Console.ForegroundColor = ConsoleColor.Green;
     Console.ResetColor();
 }
 
@@ -40,13 +46,15 @@ void EvenElementsKvadrat(int[,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            if(i%2 == 0 && j%2 == 0) arr[i, j] = arr[i, j] * arr[i, j];
+            if (i % 2 == 0 && j % 2 == 0) arr[i, j] = arr[i, j] * arr[i, j];
         }
     }
 }
 
-int[,] ArrayMatrix = GetRnd(3,3);
+int[,] ArrayMatrix = GetRnd(3, 3);
 PrintMatrix(ArrayMatrix);
 EvenElementsKvadrat(ArrayMatrix);
+System.Console.WriteLine();
+PrintMatrix(ArrayMatrix);
 System.Console.WriteLine();
 PrintMatrix(ArrayMatrix);

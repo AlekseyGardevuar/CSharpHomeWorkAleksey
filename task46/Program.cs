@@ -19,21 +19,25 @@ int[,] GetRnd(int rows, int colom)
 
 void PrintMatrix(int[,] arr)
 {
-    Console.ForegroundColor = ConsoleColor.Green;
+    System.Console.Write("[ ] \t");
+    for (int j = 0; j < arr.GetLength(1); j++)
+    {
+        System.Console.Write($"[{j}] \t");
+    }
+    System.Console.WriteLine();
     for (int i = 0; i < arr.GetLength(0); i++)
     {
+        System.Console.Write($"[{i}] \t");
         for (int j = 0; j < arr.GetLength(1); j++)
         {
         Console.ForegroundColor = ConsoleColor.Cyan;
-        System.Console.Write(arr[i, j] + " ");
-        /*if (i < arr.GetLength(0) - 1 || j < arr.GetLength(1) - 1)
-            System.Console.Write(", ");*/
+        System.Console.Write(" " + arr[ i, j] + "\t");
+        Console.ResetColor();
         }
         System.Console.WriteLine();
     }
-    Console.ForegroundColor = ConsoleColor.Green;
     Console.ResetColor();
 }
 
-int[,] ArrayMtrix = GetRnd(3,3);
+int[,] ArrayMtrix = GetRnd(3,7);
 PrintMatrix(ArrayMtrix);

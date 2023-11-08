@@ -7,7 +7,7 @@
 
 Console.Clear();
 
-int Method1(int number)
+int Method1(int number) //метод должен вернуть интовое значение (int перед названием метода) на вход должен принять интовое число
 {
     int mult = 1;
     for (int i = 1; i <= number; i++)

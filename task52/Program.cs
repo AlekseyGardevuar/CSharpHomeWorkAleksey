@@ -51,7 +51,7 @@ void SredAref(int[,] arr)
                 summ += arr[i, j];
             }
             sredAref = summ / arr.GetLength(0);
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Red;
             System.Console.Write(Math.Round(sredAref, 2) + "\t");
             summ = 0;
             sredAref = 0;

@@ -2,6 +2,8 @@
 Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 */
 
+Console.Clear();
+
 double[,] GetArray(int rows, int colom)
 {
     double[,] array = new double[rows, colom];

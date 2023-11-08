@@ -20,17 +20,23 @@ int[,] GetRnd(int rows, int colom)
 
 void PrintMatrix(int[,] arr)
 {
-    Console.ForegroundColor = ConsoleColor.Green;
+    System.Console.Write("[ ] \t");
+    for (int j = 0; j < arr.GetLength(1); j++)
+    {
+        System.Console.Write($"[{j}] \t");
+    }
+    System.Console.WriteLine();
     for (int i = 0; i < arr.GetLength(0); i++)
     {
+        System.Console.Write($"[{i}] \t");
         for (int j = 0; j < arr.GetLength(1); j++)
         {
         Console.ForegroundColor = ConsoleColor.Cyan;
-        System.Console.Write(arr[i, j] + " ");
+        System.Console.Write(" " + arr[ i, j] + "\t");
+        Console.ResetColor();
         }
         System.Console.WriteLine();
     }
-    Console.ForegroundColor = ConsoleColor.Green;
     Console.ResetColor();
 }
 
@@ -44,7 +50,7 @@ int SummaDiag(int[,] arr)
     return result;
 }
 
-int[,] ArrayMatrix = GetRnd(3,3);
+int[,] ArrayMatrix = GetRnd(5,7);
 PrintMatrix(ArrayMatrix);
 int summ = SummaDiag(ArrayMatrix);
 System.Console.WriteLine();
