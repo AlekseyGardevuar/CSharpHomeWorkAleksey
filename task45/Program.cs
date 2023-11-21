@@ -100,5 +100,6 @@ int endArr = Convert.ToInt32(Console.ReadLine());
 
 int[] arrayUser = GetArray(sizeArr, startArr, endArr);
 PrintArray(arrayUser);
+System.Console.WriteLine();
 int[] arrayCopy = CopyArr(sizeArr, arrayUser);
 PrintArray(arrayCopy);

@@ -30,16 +30,16 @@ void PrintMatrix(int[,] arr)
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         System.Console.Write($"[{i}] \t");
+        Console.ForegroundColor = ConsoleColor.Cyan;
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        System.Console.Write(" " + arr[ i, j] + "\t");
-        Console.ResetColor();
+        System.Console.Write(" " + arr[i, j] + "\t");
         }
+        Console.ResetColor();
         System.Console.WriteLine();
     }
-    Console.ResetColor();
+    //Console.ResetColor();
 }
 
-int[,] ArrayMtrix = GetRnd(3,7);
+int[,] ArrayMtrix = GetRnd(6,6);
 PrintMatrix(ArrayMtrix);
